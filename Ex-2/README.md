@@ -1,3 +1,3 @@
 # Basic JavaScript Demonstration
 
-JavaScript is used to perform addition here.
+JavaScript to calculate Area of a Triangle. Illustrates the use of Functions and variables.
