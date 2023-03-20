@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!-- Write a program to accept principle,rate of interest and time from HTML and calculate simple interest and display the same. -->
+<head>
+    <title>JS - Simple Interest</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <h1>JS - Simple Interest</h1>
+        <p>Enter the values for principle, rate of interest and time.</p>
+
+        <div class="form">
+            <label class="f-label" for="principle">Principle</label>
+            <input class="f-input" type="number" id="principle" name="principle" placeholder="Enter Principle" required>
+            <br>
+            <label class="f-label" for="rate">Rate of Interest</label>
+            <input class="f-input" type="number" id="rate" name="rate" placeholder="Enter Rate of Interest" required>
+            <br>
+            <label class="f-label" for="time">Time</label>
+            <input class="f-input" type="number" id="time" name="time" placeholder="Enter Time" required>
+            <br>
+            <button onclick="calculate()">Calculate</button>
+
+            <div id="result"></div>
+        </div>  
+        
+    </div>
+</body>
+
+</html>
