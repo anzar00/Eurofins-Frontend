@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Result Generator</title>
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Result Generator</h1>
+        <p>Enter the details to generate the result.</p>
+        <div class="form">
+            <label class="f-label" for="name">Name</label>
+            <input class="f-input" type="text" id="name" name="name" placeholder="Enter Name" required>
+            <br>
+            <label class="f-label" for="sub1">Subject 1</label>
+            <input class="f-input" type="number" id="sub1" name="sub1" placeholder="Enter Subject 1 Marks" required>
+            <br>
+            <label class="f-label" for="sub2">Subject 2</label>
+            <input class="f-input" type="number" id="sub2" name="sub2" placeholder="Enter Subject 2 Marks" required>
+            <br>
+            <label class="f-label" for="sub3">Subject 3</label>
+            <input class="f-input" type="number" id="sub3" name="sub3" placeholder="Enter Subject 3 Marks" required>
+            <br>
+            <button class="btn" onclick="resultGenerator()">Generate Result</button>
+            <div id="result"></div>
+        </div>
+    </body>
+</html>
