@@ -1,0 +1,75 @@
+<!-- Write a program to accept name, empId, basic, special allowances, percentage of bonus and monthly tax saving investments. The gross monthly salary is basic + special allowances. Compute the annual salary. The gross annual salary also includes
+ the bonus. Compute the annual net salary, by deducting taxes as suggested.
+a. Income upto 2.5 lakhs – exempted
+b. Income from 2.5 lakhs to 5 lakhs – 5%
+c. Income from 5 lakhs to 10 lakhs – 20%
+d. Income from 10 lakhs onwards – 30%
+However, if there is any tax saving investment, then there is further exemption of upto 1.5 lakhs annually. This would mean that by having tax saving investments of about 1.5 lakhs, an income of 4 lakhs is non-taxable. Display the annual gross, annual net and
+ tax payable -->
+
+<html>
+    <head>
+        <title>Salary Calculator</title>
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Salary Calculator</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Employee ID</td>
+                    <td><input type="text" id="empId"></td>
+                </tr>
+                <tr>
+                    <td>Basic</td>
+                    <td><input type="text" id="basic"></td>
+                </tr>
+                <tr>
+                    <td>Special Allowances</td>
+                    <td><input type="text" id="specialAllowances"></td>
+                </tr>
+                <tr>
+                    <td>Bonus</td>
+                    <td><input type="text" id="bonus"></td>
+                </tr>
+                <tr>
+                    <td>Tax Saving Investments</td>
+                    <td><input type="text" id="taxSavingInvestments"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn" value="Calculate" onclick="salaryCalculator()"></td>
+                </tr>
+            </table>
+        </form>
+
+        <div id="result">
+            <table>
+                <tr>
+                    <td>Gross Monthly Salary</td>
+                    <td id="grossMonthlySalary"></td>
+                </tr>
+                <tr>
+                    <td>Annual Salary</td>
+                    <td id="annualSalary"></td>
+                </tr>
+                <tr>
+                    <td>Gross Annual Salary</td>
+                    <td id="grossAnnualSalary"></td>
+                </tr>
+                <tr>
+                    <td>Annual Net Salary</td>
+                    <td id="annualNetSalary"></td>
+                </tr>
+                <tr>
+                    <td>Tax Payable</td>
+                    <td id="taxPayable"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
