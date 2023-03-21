@@ -7,14 +7,16 @@
 </head>
 
 <body>
-    <h1>Ex-1</h1>
-    <p onCopy="alert('Copy Forbidden')">Try to copy.</p>
+    <h1>Example JS events</h1>
+    <p onCopy="alert('Copy Forbidden')">Try to copy me.</p>
 
-    <button onclick="myFunction()">Click me</button>
+    <button onclick="myFunction()">Click me.</button>
 
-    <p ondblclick="alert('Double Click Forbidden')">Double click.</p>
+    <p ondblclick="alert('Double Click Forbidden')">Double click me.</p>
 
     <p onmouseover="this.style.fontSize='35px'" onmouseout="this.style.fontSize='20px'">Mouse over me.</p>
+
+    <textarea onmousemove=" this.placeholder = event.clientX + ':' + event.clientY " placeholder="Mouse Over"></textarea>
 </body>
 
 </html>
