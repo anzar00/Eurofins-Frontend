@@ -30,10 +30,10 @@ function flipCoin() {
 
 flipBtn.addEventListener("click", function () {
     flipCoin()
-        .then((result) => {
+        .then(function(result) {
             console.log(result);
         })
-        .catch((error) => {
+        .catch(function(error) {
             console.log(error);
         });
 });
