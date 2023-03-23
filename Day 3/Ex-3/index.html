@@ -1,0 +1,76 @@
+<!-- Demo of JS Promise to load multiple images -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JS Promise - Loading Images
+    </title>
+</head>
+
+<body>
+    <h1>JS Promise - Loading Images</h1>
+    <img id="img1" width="100px"
+        src="https://th.bing.com/th/id/R.010edbcb0206d4bc24ddcccd1fc307cd?rik=vyYRWmr9OvrOsA&riu=http%3a%2f%2fallpicts.in%2fwp-content%2fuploads%2f2015%2f07%2fBeautiful-Nature-Wallpaper-with-Two-Lotus-Flowers-in-Pink.jpg&ehk=fAzo4nd97vUOJugZ9Y5IT5Ia5JhQC9fK0yQxLVJS1iA%3d&risl=&pid=ImgRaw&r=0" />
+    <img id="img2" width="100px" src="https://th.bing.com/th/id/OIP.JJ7zKioKVMYinU8LkSbZngHaJ4?pid=ImgDet&rs=1" />
+    <img id="img3" width="100px"
+        src="https://th.bing.com/th/id/R.25706c48bf64c06680b54f51d5725a82?rik=7lIg4VCVDF3l5g&riu=http%3a%2f%2fwww.photos-public-domain.com%2fwp-content%2fuploads%2f2011%2f08%2fbright-pink-peony-flowers.jpg&ehk=fvkp2R96vR6cvcENkDKVSFqWofiRGjXBPYSGN%2fAfcDE%3d&risl=&pid=ImgRaw&r=0" />
+    <img id="img4" width="100px"
+        src="https://th.bing.com/th/id/R.acd20a373e94683190a59ac925aa3c73?rik=e11YaKDyHc%2ffjg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fO5RI9RU.jpg&ehk=UmK1Fdv062wVio%2fAXeo%2b8n63uV2ip7yl6TA5KYbo4Fw%3d&risl=&pid=ImgRaw&r=0" />
+    <img id="img5" width="100px"
+        src="https://th.bing.com/th/id/R.962d893a6217d028d3469e1ff8dd317b?rik=8FC5LIbL0tBVAA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-V_Avr99j_8g%2fTza6wI-croI%2fAAAAAAAAJns%2fY83HzC5ImHE%2fs1600%2fDaisy%2bflower%2bwallpapers.%2b(2).jpg&ehk=jNT7%2fm5ZMQ6N0f9s4%2bn88pjYtuxDqXI0BbOPez5ISHc%3d&risl=&pid=ImgRaw&r=0" />
+    
+    <script>
+
+        // Load Images using Promise 
+
+        var promise = new Promise(function (resolve, reject) {
+            var img1 = document.getElementById("img1");
+            var img2 = document.getElementById("img2");
+            var img3 = document.getElementById("img3");
+            var img4 = document.getElementById("img4");
+            var img5 = document.getElementById("img5");
+
+            var images = [img1, img2, img3, img4, img5];
+
+            var promises = [];
+            for (var i = 0; i < images.length; i++) {
+                // Create a promise for each image
+                promises.push(new Promise(function (resolve, reject) {
+                    // Load the image
+                    images[i].onload = function () {
+                        // Resolve the promise
+                        resolve();
+                    };
+                }));
+            }
+
+            // Wait for all promises to resolve
+            Promise.all(promises).then(function () {
+                // Resolve the promise
+                resolve();
+            });
+
+            // If a promise fails, execute the reject function
+            Promise.all(promises).catch(function () {
+                // Reject the promise
+                reject();
+            });
+        });
+
+        // Wait for the promise to resolve
+        promise.then(function () {
+            // Display a message
+            alert("All images loaded");
+        });
+
+        // Wait for the promise to reject
+        promise.catch(function () {
+            // Display a message
+            alert("An error occurred");
+        });
+    </script>
+</body>
+
+</html>
