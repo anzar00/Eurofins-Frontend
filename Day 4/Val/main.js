@@ -45,5 +45,6 @@ function validateForm() {
     }
 
     // If all the validations are passed, submit the form
+    confirm('Success!')
     return true;
 }
