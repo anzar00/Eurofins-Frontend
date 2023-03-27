@@ -48,6 +48,13 @@ function validateForm() {
         alert("Card number should be 16 digits");
         return false;
     }
+
+    // card number should be a number
+    if (isNaN(number)) {
+        alert("Card number should be a number");
+        return false;
+    }
+    
     if (cvv == "") {
         alert("CVV must be filled out");
         return false;
@@ -56,6 +63,12 @@ function validateForm() {
     // cvv should be 3 digits
     if (cvv.length != 3) {
         alert("CVV should be 3 digits");
+        return false;
+    }
+
+    // cvv should be a number
+    if (isNaN(cvv)) {
+        alert("CVV should be a number");
         return false;
     }
 
@@ -72,12 +85,22 @@ function validateForm() {
         return false;
     }
 
+    
     // expiry YYYY should be greater or equal to current year
     var expiryYY = expiry.substring(3, 7); 
     var currentYear = new Date().getFullYear();
     if (expiryYY < currentYear) {
         alert("Expiry year should be greater or equal to current year");
         return false;
+    }
+    
+    // expiry MM should be greater or equal to current month if the year is current year
+    if (expiryYY == currentYear) {
+        var currentMonth = new Date().getMonth() + 1;
+        if (expiryMM < currentMonth) {
+            alert("Expiry month should be greater or equal to current month");
+            return false;
+        }
     }
 
     alert("Payment Successful");
