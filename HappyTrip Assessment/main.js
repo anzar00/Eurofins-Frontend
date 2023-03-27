@@ -79,4 +79,6 @@ function validateForm() {
         alert("Expiry year should be greater or equal to current year");
         return false;
     }
+
+    alert("Payment Successful");
 }
