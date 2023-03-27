@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Trip</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+        // Auto load the flight details on page load
+        window.onload = loadFlightDetails;
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none p-2">
+                    <h2>Happy Trip</h2>
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
+                </ul>
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <div class="container">
+        <div class="row mt-2">
+            <!-- Load Flight Details on the left side -->
+
+            <div class="col-md-3">
+                <div class="card" id="flight-details-card">
+                    <div class="card-header">
+                        <h3>Flight Details</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="number" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="number">
+                            </div>
+                            <div class="mb-3">
+                                <label for="dob" class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control" id="dob">
+                            </div>
+                            <div class="mb-3">
+                                <label for="departure" class="form-label">Departure</label>
+                                <input type="date" class="form-control" id="departure">
+                            </div>
+                            <div class="mb-3">
+                                <label for="arrival" class="form-label">Arrival</label>
+                                <input type="date" class="form-control" id="arrival">
+                            </div>
+                            <div class="mb-3">
+                                <label for="from" class="form-label">From</label>
+                                <input type="text" class="form-control" id="from">
+                            </div>
+                            <div class="mb-3">
+                                <label for="to" class="form-label">To</label>
+                                <input type="text" class="form-control" id="to">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flights -->
+            <div class="col-md-9">
+                <!-- Load flights in card view from flights.json -->
+                <div class="row" id="fligts_row">
+                    <div class="card mb-2 col-6" id="flights">
+                        <img src="" class="card-img-top" alt="Flight Image" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Flight Number</h5>
+                            <p class="card-text">Departure Airport - Arrival Airport</p>
+                            <p class="card-text">Departure Date, Departure Time - Arrival Date, Arrival Time</p>
+                            <p class="card-text">Flight Price</p>
+                            <button onclick="window.location.href='payment.html'" type="button"
+                                class="btn btn-primary book-now-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Load flights data from JSON file using Axios
+        axios.get('flights.json')
+            .then(function (response) {
+                // Loop through flights data and add each flight to a cloned Bootstrap card view
+                var flights = response.data.flights;
+                var cardTemplate = $('#flights').clone();
+                for (var i = 0; i < flights.length; i++) {
+                    var flight = flights[i];
+                    var card = cardTemplate.clone();
+                    card.find('.card-img-top').attr('src', flight.flightImage);
+                    card.find('.card-title').text(flight.flightNumber);
+                    card.find('.card-text').eq(0).text(flight.departureAirport + ' - ' + flight.arrivalAirport);
+                    card.find('.card-text').eq(1).text(flight.departureDate + ', ' + flight.departureTime + ' - ' + flight.arrivalDate + ', ' + flight.arrivalTime);
+                    card.find('.card-text').eq(2).text('₹' + flight.flightPrice.toFixed(2));
+                    card.find('.book-now-btn').attr('onclick', 'window.location.href="payment.html?flightNumber=' + flight.flightNumber + '"');
+                    card.appendTo('#fligts_row');
+                }
+                $('#flights').first().remove();
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    </script>
+</body>
+
+</html>

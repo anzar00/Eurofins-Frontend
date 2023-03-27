@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Trip</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none p-2">
+                    <h2>Happy Trip</h2>
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
+                </ul>
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Book your flight with us</h1>
+                <p>Happy Trip is a flight booking website that allows you to book flights to your desired destinations.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <!-- Form to capture flight and passanger details as above -->
+                <h1>Book your flight</h1>
+                <form name="myForm" onsubmit="return validateForm()">
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Passanger Name">
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="mb-3">
+                        <label for="number" class="form-label">Mobile Number</label>
+                        <input type="tel" class="form-control" id="number" placeholder="+91 123 456 7890">
+                    </div>
+                    <!-- DOB -->
+                    <div class="mb-3">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob">
+                    </div>
+                    <!-- Departure and Arrival -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="departure" class="col-sm-6 col-form-label">Departure Date</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="departure">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="arrival" class="col-sm-6 col-form-label">Arrival Date</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="arrival">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- From -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="from" class="form-label">From</label>
+                            <input type="text" class="form-control" id="from" placeholder="E.g. - Bangalore">
+                        </div>
+                        <!-- To -->
+                        <div class="col-md-6">
+                            <label for="to" class="form-label">To</label>
+                            <input type="text" class="form-control" id="to" placeholder="E.g. - Delhi">
+                        </div>
+                    </div>
+                    
+                    <!-- Submit -->
+                    <button type="button" class="btn btn-primary" onclick="storeFlightDetails()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{
+    "flights": [
+      {
+        "flightNumber": "AI101",
+        "departureAirport": "DEL",
+        "arrivalAirport": "BLR",
+        "departureTime": "10:00 AM",
+        "arrivalTime": "12:30 PM",
+        "departureDate": "27-03-2023",
+        "arrivalDate": "27-03-2023",
+        "flightImage": "https://cdni.rbth.com/rbthmedia/images/2021.01/original/601113d185600a02866436d8.jpg",
+        "flightPrice": 4000.00
+      },
+      {
+        "flightNumber": "6E202",
+        "departureAirport": "DEL",
+        "arrivalAirport": "BLR",
+        "departureTime": "2:00 PM",
+        "arrivalTime": "4:30 PM",
+        "departureDate": "27-03-2023",
+        "arrivalDate": "27-03-2023",
+        "flightImage": "https://cdn.wallpapersafari.com/37/9/DTurLX.png",
+        "flightPrice": 3500.00
+      },
+      {
+        "flightNumber": "SG331",
+        "departureAirport": "DEL",
+        "arrivalAirport": "BLR",
+        "departureTime": "8:00 AM",
+        "arrivalTime": "10:30 AM",
+        "departureDate": "27-03-2023",
+        "arrivalDate": "27-03-2023",
+        "flightImage": "https://resources.globalair.com/aircraftforsale/images/ads/original/81104_ACJ320neo_CFM_AIB_V02_HD.jpg",
+        "flightPrice": 2800.00
+      }
+    ]
+  }
+  
