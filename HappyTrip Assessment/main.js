@@ -72,7 +72,7 @@ function validateForm() {
         return false;
     }
 
-    // expiry YY should be greater or equal to current year
+    // expiry YYYY should be greater or equal to current year
     var expiryYY = expiry.substring(3, 7); 
     var currentYear = new Date().getFullYear();
     if (expiryYY < currentYear) {
