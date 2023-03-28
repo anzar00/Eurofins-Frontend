@@ -13,12 +13,14 @@ console.log("Customer Name: " + customerName);
 
 // Lab - 3
 
-function totalPrice(n1: number,n2: number) {
+function totalPrice(n1: number,n2: number, showRes: boolean) {
+    if(showRes) {
+        console.log(`Total Price of the order is : Rs. ${n1 + n2}`);
+    }
     return n1 + n2;
 }
 
 const itemPrice = 100;
 const deliveryCharge = 50.80;
-const total = totalPrice(itemPrice, deliveryCharge);
-
-console.log(`Total Price of the order is : Rs. ${total}`);
+const showResult = false;
+totalPrice(itemPrice, deliveryCharge, showResult);
