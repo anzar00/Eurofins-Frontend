@@ -28,3 +28,8 @@ var foodItem = {
 };
 console.log(foodItem);
 // console.log(foodItem.itemId);
+// Lab - 9
+var foodItems = ["Sandwich", "Pizza", "Pasta", "Salad", "Pancake", "Rice", "Icecream"];
+foodItems.forEach(function (item, index) {
+    console.log("".concat(index + 1, ". ").concat(item));
+});

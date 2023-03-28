@@ -38,3 +38,11 @@ const foodItem = {
 
 console.log(foodItem);
 // console.log(foodItem.itemId);
+
+// Lab - 9
+
+const foodItems = ["Sandwich", "Pizza", "Pasta", "Salad", "Pancake", "Rice", "Icecream"];
+
+foodItems.forEach((item, index) => {
+    console.log(`${index + 1}. ${item}`);
+});
