@@ -13,7 +13,7 @@ console.log("Customer Name: " + customerName);
 
 // Lab - 3
 
-function totalPrice(n1,n2) {
+function totalPrice(n1: number,n2: number) {
     return n1 + n2;
 }
 
