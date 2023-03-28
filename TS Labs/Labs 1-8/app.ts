@@ -13,9 +13,9 @@ console.log("Customer Name: " + customerName);
 
 // Lab - 3
 
-function totalPrice(n1: number,n2: number, showRes: boolean) {
+function totalPrice(n1: number,n2: number, showRes: boolean, order: string) {
     if(showRes) {
-        console.log(`Total Price of the order is : Rs. ${n1 + n2}`);
+        console.log(`${order} Price : Rs. ${n1 + n2}`);
     }
     return n1 + n2;
 }
@@ -23,4 +23,5 @@ function totalPrice(n1: number,n2: number, showRes: boolean) {
 const itemPrice = 100;
 const deliveryCharge = 50.80;
 const showResult = false;
-totalPrice(itemPrice, deliveryCharge, showResult);
+const order = "Chocolate Shake";
+totalPrice(itemPrice, deliveryCharge, showResult, order);
