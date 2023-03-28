@@ -6,7 +6,7 @@ var customerID = 11102;
 var customerName = "ABC";
 console.log("Customer ID: " + customerID);
 console.log("Customer Name: " + customerName);
-// Lab - 3
+// Lab - 3 - 7
 function totalPrice(n1, n2, showRes, order) {
     var total = n1 + n2;
     if (showRes) {
@@ -19,3 +19,12 @@ var deliveryCharge = 50.80;
 var showResult = true;
 var order = "Chocolate Shake";
 totalPrice(itemPrice, deliveryCharge, showResult, order);
+// Lab - 8
+var foodItem = {
+    itemId: 1,
+    itemName: "Chocolate Shake",
+    itemPrice: 100,
+    itemCategory: "Shakes",
+};
+console.log(foodItem);
+// console.log(foodItem.itemId);

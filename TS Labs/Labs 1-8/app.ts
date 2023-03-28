@@ -11,7 +11,7 @@ let customerName: string = "ABC";
 console.log("Customer ID: " + customerID);
 console.log("Customer Name: " + customerName);
 
-// Lab - 3
+// Lab - 3 - 7
 
 function totalPrice(n1: number,n2: number, showRes: boolean, order: string) {
     const total = n1 + n2;
@@ -26,3 +26,15 @@ const deliveryCharge = 50.80;
 const showResult = true;
 const order = "Chocolate Shake";
 totalPrice(itemPrice, deliveryCharge, showResult, order);
+
+// Lab - 8
+
+const foodItem = {
+    itemId: 1,
+    itemName: "Chocolate Shake",
+    itemPrice: 100,
+    itemCategory: "Shakes",
+};
+
+console.log(foodItem);
+// console.log(foodItem.itemId);
