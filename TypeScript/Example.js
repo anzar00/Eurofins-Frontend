@@ -49,4 +49,5 @@ var sum = /** @class */ (function () {
 }());
 exports.sum = sum;
 var ClassSum = new sum();
-console.log(ClassSum.printSum());
+ClassSum.printSum();
+ClassSum.printArray();

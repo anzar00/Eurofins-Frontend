@@ -54,5 +54,5 @@ export class sum {
 }
 
 var ClassSum = new sum();
-console.log(ClassSum.printSum());
-console.log(ClassSum.printArray());
+ClassSum.printSum();
+ClassSum.printArray();
