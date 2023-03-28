@@ -7,13 +7,15 @@ var customerName = "ABC";
 console.log("Customer ID: " + customerID);
 console.log("Customer Name: " + customerName);
 // Lab - 3
-function totalPrice(n1, n2, showRes) {
+function totalPrice(n1, n2, showRes, order) {
+    var total = n1 + n2;
     if (showRes) {
-        console.log("Total Price of the order is : Rs. ".concat(n1 + n2));
+        console.log("The Price of ".concat(order, " is Rs. ").concat(total, " including delivery charges of Rs. ").concat(n2));
     }
-    return n1 + n2;
+    return total;
 }
 var itemPrice = 100;
 var deliveryCharge = 50.80;
-var showResult = false;
-totalPrice(itemPrice, deliveryCharge, showResult);
+var showResult = true;
+var order = "Chocolate Shake";
+totalPrice(itemPrice, deliveryCharge, showResult, order);

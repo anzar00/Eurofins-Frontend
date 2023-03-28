@@ -14,14 +14,15 @@ console.log("Customer Name: " + customerName);
 // Lab - 3
 
 function totalPrice(n1: number,n2: number, showRes: boolean, order: string) {
+    const total = n1 + n2;
     if(showRes) {
-        console.log(`${order} Price : Rs. ${n1 + n2}`);
+        console.log(`The Price of ${order} is Rs. ${total} including delivery charges of Rs. ${n2}`);
     }
-    return n1 + n2;
+    return total;
 }
 
 const itemPrice = 100;
 const deliveryCharge = 50.80;
-const showResult = false;
+const showResult = true;
 const order = "Chocolate Shake";
 totalPrice(itemPrice, deliveryCharge, showResult, order);
