@@ -208,7 +208,7 @@ async function rateFunction() {
         document.getElementById('rateMessage').innerHTML = msg;
     }
     catch (err) {
-        console.error(err);
+        document.getElementById('rateMessage').innerHTML = err;
     }
 }
 
