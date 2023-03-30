@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Registeration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+     <div class="container">
+         <div class="reg-form">
+            <h1>Registration Form</h1>
+            <form name="register" action="success.html" onsubmit="return validateForm()">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+
+                <label for="password">Password</label>
+                <div class="password-group">
+                    <input type="password" id="password" name="password" placeholder="Your password.." oninput="checkPasswordStrength()">
+                    <button type="button" id="show-password"  onclick="showPassword()" class="btn-show">&#x1F441;</button>
+                    <span id="password-strength"></span>
+                </div>
+
+                <label for="confirm-password">Confirm Password</label>
+                <div class="confirm-group">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password.." oninput="checkPasswordMatch()">
+                    <span id="password-match"></span>
+                </div>
+
+                <label for="sex">Sex</label>
+                <div class="sex-group">
+                    <select name="sex" id="sex" onchange="loadGender()">
+                        <option value="">--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    
+                    <span id="gender-label"></span>
+                
+                </div>
+
+                <input type="submit" class="submit-btn" value="Register">
+
+                <p class="msg" id="msg"></p>
+            </form>
+        </div>
+     </div>
+    
+</body>
+</html>
