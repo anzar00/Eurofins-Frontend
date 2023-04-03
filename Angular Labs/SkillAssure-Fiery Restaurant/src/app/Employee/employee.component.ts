@@ -30,6 +30,12 @@ export class EmployeeComponent implements OnInit {
 
   // Lab 4: Interpolation - Person data
 
+  Name: string = "John Doe";
+  Gender: string = "M";
+  DOB: string = new Date(1992,1,22).toLocaleDateString();
+  Area: string = "Whitefield";
+  IsAvailable: boolean = true;
+
 
 
   // Lab 7: StyleBinding - isAvailable

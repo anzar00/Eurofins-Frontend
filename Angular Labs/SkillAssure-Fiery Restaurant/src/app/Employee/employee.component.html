@@ -22,30 +22,30 @@
     <div class="card">
     <img src="../../assets/images/female.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Girish Jedar</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->
+      <h5 class="card-title">{{ Name }}</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->
       <div class="card-text">
         <div class="row">
             <div class="col-lg-6">
                 <span class="text-center bold">Gender</span>
             </div>
             <div class="col-lg-6">
-                <span class="text-center">Male</span>
+                <span class="text-center">{{ Gender }}</span>
             </div>
             <div class="col-lg-6">
                 <span class="text-center bold">DOB</span>
             </div>
             <div class="col-lg-6">
-                <span class="text-center">22/01/1999</span>     <!-- Lab 10: *ngIf - null data -->  <!-- Lab 11: Pipes - date format -->
+                <span class="text-center">{{ DOB }}</span>     <!-- Lab 10: *ngIf - null data -->  <!-- Lab 11: Pipes - date format -->
             </div>
             <div class="col-lg-6">
                 <span class="text-center bold">Op. Area</span>
             </div>
             <div class="col-lg-6">
-                <span class="text-center">Whitefield</span>
+                <span class="text-center">{{ Area }}</span>
             </div>
         </div>
         <hr>
-        <div class="text-center bold">Available</div>
+        <div class="text-center bold">{{ IsAvailable ? 'Available' : 'Not Available'}}</div>
     </div>
     </div>
 </div>
