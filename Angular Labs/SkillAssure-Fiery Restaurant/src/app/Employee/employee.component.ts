@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Employee } from '../../shared/models/Employee'
 import { EmployeeService } from '../../core/services/EmployeeService';
 // import { error } from '@angular/compiler/src/util';
@@ -60,6 +60,8 @@ export class EmployeeComponent implements OnInit {
   }
 
   // Lab 9: Two-way Binding - searchText
+
+  searchText: string = "";
 
   // Lab 10: *ngFor - data array
 

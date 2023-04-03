@@ -3,10 +3,10 @@
       <h1>Delivery Service Employees</h1>
     </div>
     <div class="col-lg-3">
-      <input type="text" class="float-right" placeholder="search">
-
+      <input type="text" class="float-right" placeholder="search" [(ngModel)] = "searchText">
+      <br><br>
       <!-- Lab 9: Two-way Binding - search Text -->
-
+      <span>You searched : {{ searchText }}</span>
     </div>
     <div class="col-lg-1">
       <button>New Employee</button>  <!-- Lab 16: Routing - Form Page -->
