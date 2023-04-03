@@ -22,7 +22,7 @@
     <div class="card" (mouseenter)="mouseOver($event)" (mouseleave)="mouseOut($event)">
     <img [src]="e.Gender == 'M' ? ImgSrcM : ImgSrcF" class="card-img-top" alt="..." [appHighlight]>
     <div class="card-body">
-      <h5 class="card-title">{{ e.Name | uppercase }}</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->
+      <h5 class="card-title">{{ e.Name | uppercase | employeeTitle:e.Gender}}</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->
       <div class="card-text">
         <div class="row">
             <div class="col-lg-6">
