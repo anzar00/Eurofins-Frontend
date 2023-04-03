@@ -14,17 +14,17 @@ export class EmployeeComponent implements OnInit {
 
   // Lab 14: Services - getEmployees()
   employees: Employee[] = [];
-  constructor(private _employeeService: EmployeeService) { 
-    
+  constructor(private _employeeService: EmployeeService) {
+
   }
 
   ngOnInit(): void {
-    
+
 
     // Lab 15: HTTP Service - RxJs
 
-    
-    
+
+
   }
 
 
@@ -32,10 +32,10 @@ export class EmployeeComponent implements OnInit {
 
   Name: string = "John Doe";
   Gender: string = "M";
-  DOB: string = new Date(1992,1,22).toLocaleDateString();
+  DOB: string = new Date(1992, 1, 22).toLocaleDateString();
   Area: string = "Whitefield";
   IsAvailable: boolean = false;
-  
+
   // Lab 5: Property Binding - ImgSrc
 
   ImgSrcM: string = '../../assets/images/male.png';
@@ -50,14 +50,21 @@ export class EmployeeComponent implements OnInit {
   // Lab 7: StyleBinding - isAvailable
 
   // Lab 8: Event Binding - box-shadow
-  
+
+  mouseOver($event) {
+    $event.srcElement.classList.add('box-shadow');
+  }
+
+  mouseOut($event) {
+    $event.srcElement.classList.remove('box-shadow');
+  }
 
   // Lab 9: Two-way Binding - searchText
 
   // Lab 10: *ngFor - data array
 
 
-  
+
 
 
   // Lab 13: Input Property - Get counts
