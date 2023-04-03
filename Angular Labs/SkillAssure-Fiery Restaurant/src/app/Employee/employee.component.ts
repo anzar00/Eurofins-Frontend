@@ -34,7 +34,7 @@ export class EmployeeComponent implements OnInit {
   Gender: string = "M";
   DOB: string = new Date(1992,1,22).toLocaleDateString();
   Area: string = "Whitefield";
-  IsAvailable: boolean = true;
+  IsAvailable: boolean = false;
   
   // Lab 5: Property Binding - ImgSrc
 
@@ -49,17 +49,10 @@ export class EmployeeComponent implements OnInit {
 
   // Lab 7: StyleBinding - isAvailable
 
+  // Lab 8: Event Binding - box-shadow
   
 
   // Lab 9: Two-way Binding - searchText
-
-
-  // Lab 8: Event Binding - box-shadow
-
-  
-
-
-
 
   // Lab 10: *ngFor - data array
 
