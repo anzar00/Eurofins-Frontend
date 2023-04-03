@@ -10,7 +10,11 @@
 
 /* Lab 3: Styling Component */
 
-.card-title{
+.bold{
+    font-weight: bold;
+}
+
+.card-title, .text-center{
     text-align: center;
 }
 
