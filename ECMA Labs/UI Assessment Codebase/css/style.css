@@ -671,12 +671,12 @@ input[type="submit"],input[type="reset"],a,.agileinfo_services_grid1_pos,.agilei
 .w3layouts_footer_grid p a:hover{
 	color:#00ba66;
 }
-/* .w3layouts_footer_grid form{
+.w3layouts_footer_grid form{
     padding: 1em;
     border: 1px solid #fff;
     border-radius: 30px;
     width: 70%;
-} */
+}
 .w3layouts_footer_grid input[type="email"]{
 	outline:none;
 	padding:0 10px;
