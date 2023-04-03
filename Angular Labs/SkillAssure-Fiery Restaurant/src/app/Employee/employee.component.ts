@@ -36,6 +36,9 @@ export class EmployeeComponent implements OnInit {
   Area: string = "Whitefield";
   IsAvailable: boolean = true;
 
+  ImgSrcM: string = '../../assets/images/male.png';
+  ImgSrcF: string = '../../assets/images/female.png';
+
 
 
   // Lab 7: StyleBinding - isAvailable
