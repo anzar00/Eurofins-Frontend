@@ -18,34 +18,37 @@
 
 
 <div class="row">
-<div class="col-lg-3"> <!-- Lab 10: *ngFor - data loop -->
+<div class="col-lg-3" *ngFor="let e of employees; trackBy: trackByEmpID;"> <!-- Lab 10: *ngFor - data loop -->
     <div class="card" (mouseenter)="mouseOver($event)" (mouseleave)="mouseOut($event)">
-    <img [src]="Gender == 'M' ? ImgSrcM : ImgSrcF" class="card-img-top" alt="...">
+    <img [src]="e.Gender == 'M' ? ImgSrcM : ImgSrcF" class="card-img-top" alt="..." [appHighlight]>
     <div class="card-body">
-      <h5 class="card-title">{{ Name }}</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->
+      <h5 class="card-title">{{ e.Name }}</h5> <!-- Lab 11: Pipes - uppercase --> <!-- Lab 12: Custom Pipes - salutation -->
       <div class="card-text">
         <div class="row">
             <div class="col-lg-6">
                 <span [class]="KeyStyle" [ngClass]="{'italic':IsItalic}">Gender</span>
             </div>
             <div class="col-lg-6">
-                <span class="text-center">{{ Gender }}</span>
+                <span class="text-center">{{ e.Gender }}</span>
             </div>
             <div class="col-lg-6">
                 <span [class]="KeyStyle">DOB</span>
             </div>
             <div class="col-lg-6">
-                <span class="text-center">{{ DOB }}</span>     <!-- Lab 10: *ngIf - null data -->  <!-- Lab 11: Pipes - date format -->
+                <span class="text-center" *ngIf="e.DOB else NotAvailable">{{ e.DOB }}</span>     <!-- Lab 10: *ngIf - null data -->  <!-- Lab 11: Pipes - date format -->
             </div>
             <div class="col-lg-6">
                 <span [class]="KeyStyle">Op. Area</span>
             </div>
             <div class="col-lg-6">
-                <span class="text-center">{{ Area }}</span>
+                <span class="text-center">{{ e.Area }}</span>
             </div>
+            <ng-template #NotAvailable>
+                <span class="text-center">N/A</span>
+            </ng-template>
         </div>
         <hr>
-        <div [class]="KeyStyle" [style.color] = "IsAvailable ? 'green': 'red'" >{{ IsAvailable ? 'Available' : 'Not Available'}}</div>
+        <div [class]="KeyStyle" [style.color] = "e.IsAvailable ? 'green': 'red'" >{{ e.IsAvailable ? 'Available' : 'Not Available'}}</div>
     </div>
     </div>
 </div>

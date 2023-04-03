@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SocialNetworkComponent } from './header/social-network/social-network.component';
 import { StoreTitleComponent } from './header/store-title/store-title.component';
 import { UserDetailComponent } from './header/user-detail/user-detail.component';
+import { HighlightDirective } from '../shared/directives/highlight.directives';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UserDetailComponent } from './header/user-detail/user-detail.component'
     FooterComponent,
     SocialNetworkComponent,
     StoreTitleComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
