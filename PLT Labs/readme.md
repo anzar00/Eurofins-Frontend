@@ -19,9 +19,25 @@
 6.	Write a program to display the series 1, 3, 7, 13, 21, 43, 57, 73, 91, 111, 157, 183, 211 .... N
 7.	1, 1, 2, 3, 5, 8, 13, … N 
 8.	Write a program to display the 1st , 2nd , and 4th multiple of 7 which gives the remainder 1 when divided by 2,3,4,5 and 6 
-9.	"Write the program to generate the following series where N which is the upper limit should
+9.	"Write the program to generate the following series where N which is upper limit should
 be taken as an input. Also, display the count of the numbers which have the digit ‘9’ in
-them"
+them
+For example, if the value of N is 2800 the output should be as follows
+      1       1
+      4       2
+      9       3
+      49      7
+      81      9
+      121     11
+      289     17 
+      361     19
+      529     23
+      961     31
+      1369    37
+      1681    41
+      2209    47
+      Count of the numbers which have the digit 9 in them: 7 "
+
 10.	1, 2, 6, 15, 31, 56 … N
 11.	Accept the item code, description, qty and price of an item. Compute the total for the item. a. Accept the user’s choice. If the choice is ‘y’ then accept the next set of inputs for a new item and compute the total. In this manner, compute the grand total for all the items purchased by the customer. 
 
