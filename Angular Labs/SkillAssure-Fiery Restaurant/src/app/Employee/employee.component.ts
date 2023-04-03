@@ -35,20 +35,19 @@ export class EmployeeComponent implements OnInit {
   DOB: string = new Date(1992,1,22).toLocaleDateString();
   Area: string = "Whitefield";
   IsAvailable: boolean = true;
+  
+  // Lab 5: Property Binding - ImgSrc
 
   ImgSrcM: string = '../../assets/images/male.png';
   ImgSrcF: string = '../../assets/images/female.png';
 
+  // Lab 6: Class Binding - KeyStyle
 
+  KeyStyle: string = "text-center bold";
+
+  IsItalic: boolean = false;
 
   // Lab 7: StyleBinding - isAvailable
-
-
-  // Lab 5: Property Binding - ImgSrc
-
-
-
-  // Lab 6: Class Binding - KeyStyle
 
   
 

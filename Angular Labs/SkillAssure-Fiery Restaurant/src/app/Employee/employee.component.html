@@ -26,26 +26,26 @@
       <div class="card-text">
         <div class="row">
             <div class="col-lg-6">
-                <span class="text-center bold">Gender</span>
+                <span [class]="KeyStyle" [ngClass]="{'italic':IsItalic}">Gender</span>
             </div>
             <div class="col-lg-6">
                 <span class="text-center">{{ Gender }}</span>
             </div>
             <div class="col-lg-6">
-                <span class="text-center bold">DOB</span>
+                <span [class]="KeyStyle">DOB</span>
             </div>
             <div class="col-lg-6">
                 <span class="text-center">{{ DOB }}</span>     <!-- Lab 10: *ngIf - null data -->  <!-- Lab 11: Pipes - date format -->
             </div>
             <div class="col-lg-6">
-                <span class="text-center bold">Op. Area</span>
+                <span [class]="KeyStyle">Op. Area</span>
             </div>
             <div class="col-lg-6">
                 <span class="text-center">{{ Area }}</span>
             </div>
         </div>
         <hr>
-        <div class="text-center bold">{{ IsAvailable ? 'Available' : 'Not Available'}}</div>
+        <div [class]="KeyStyle">{{ IsAvailable ? 'Available' : 'Not Available'}}</div>
     </div>
     </div>
 </div>
