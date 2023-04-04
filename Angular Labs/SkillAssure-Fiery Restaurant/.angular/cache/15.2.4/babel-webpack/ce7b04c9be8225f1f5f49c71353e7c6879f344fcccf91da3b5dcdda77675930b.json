@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { __decorate } from \"tslib\";\n// Lab 14: Services - Injectable()\nlet EmployeeService = class EmployeeService {\n  constructor() {\n    this.url = 'http://219.65.96.170:9101/api/employee';\n  }\n};\nEmployeeService = __decorate([], EmployeeService);\nexport { EmployeeService };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

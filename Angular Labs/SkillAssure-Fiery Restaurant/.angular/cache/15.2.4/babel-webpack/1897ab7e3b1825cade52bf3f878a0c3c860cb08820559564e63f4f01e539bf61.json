@@ -1,0 +1,1 @@
+{"ast":null,"code":"imp;\n// Lab 14: Services - Injectable()\nexport class EmployeeService {\n  constructor() {\n    this.url = 'http://219.65.96.170:9101/api/employee';\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
