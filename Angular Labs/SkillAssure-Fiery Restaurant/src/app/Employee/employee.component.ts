@@ -76,10 +76,18 @@ export class EmployeeComponent implements OnInit {
   trackByEmpID(index: number, employee: Employee): number {
     return employee.EmployeeId;
   }
-
-
-
   // Lab 13: Input Property - Get counts
 
+  getTotalCount(): number {
+    return this.employees.length;
+  }
+
+  getMaleCount(): number {
+    return this.employees.filter(f=>f.Gender === "M").length;
+  }
+
+  getFemaleCount(): number {
+    return this.employees.filter(f=>f.Gender === "F").length;
+  }
 
 }

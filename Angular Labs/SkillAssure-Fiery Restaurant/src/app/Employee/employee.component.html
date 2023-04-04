@@ -15,7 +15,8 @@
 <hr>
 
 <!-- Lab 13: Input Property - Counts -->
-
+<app-employee-count [total]="getTotalCount()" [male]="getMaleCount()" [female]="getFemaleCount()"></app-employee-count>
+<hr>
 
 <div class="row">
 <div class="col-lg-3" *ngFor="let e of employees; trackBy: trackByEmpID;"> <!-- Lab 10: *ngFor - data loop -->
