@@ -1,0 +1,60 @@
+{
+  "employees": [
+    {
+      "EmployeeId": 1,
+      "Name": "John Doe",
+      "Gender": "M",
+      "DOB": "1992-02-22",
+      "Area": "Whitefield",
+      "IsAvailable": true
+    },
+    {
+      "EmployeeId": 2,
+      "Name": "Jane Doe",
+      "Gender": "F",
+      "DOB": "1992-02-22",
+      "Area": "Whitefield",
+      "IsAvailable": true
+    },
+    {
+      "EmployeeId": 3,
+      "Name": "John Smith",
+      "Gender": "M",
+      "DOB": "1985-08-12",
+      "Area": "Marathahalli",
+      "IsAvailable": true
+    },
+    {
+      "EmployeeId": 4,
+      "Name": "Emily Johnson",
+      "Gender": "F",
+      "DOB": "1990-05-05",
+      "Area": "Koramangala",
+      "IsAvailable": false
+    },
+    {
+      "EmployeeId": 5,
+      "Name": "David Lee",
+      "Gender": "M",
+      "DOB": "1998-12-17",
+      "Area": "Indiranagar",
+      "IsAvailable": true
+    },
+    {
+      "EmployeeId": 6,
+      "Name": "Megan Chen",
+      "Gender": "F",
+      "DOB": "1995-04-25",
+      "Area": "Bellandur",
+      "IsAvailable": true
+    },
+    {
+      "EmployeeId": 7,
+      "Name": "Daniel Kim",
+      "Gender": "M",
+      "DOB": "1989-09-09",
+      "Area": "Jayanagar",
+      "IsAvailable": false
+    }
+  ]
+}

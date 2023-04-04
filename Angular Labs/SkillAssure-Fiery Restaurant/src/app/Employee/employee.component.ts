@@ -22,10 +22,13 @@ export class EmployeeComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.employees = this._employeeService.getEmployees();
+    //this.employees = this._employeeService.getEmployees();
 
     // Lab 15: HTTP Service - RxJs
 
+    this._employeeService.getEmployees()
+      .subscribe(employees => this.employees = employees);
+      
 
 
   }
