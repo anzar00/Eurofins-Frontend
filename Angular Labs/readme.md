@@ -64,3 +64,9 @@
 
     - As per the requirement, we have a service that provides us the employees data, and we need to consume this service to get the data.
     - Implement HTTP services using Observables and fetch the data from the external service.
+
+16. 
+
+    - A form to add a new employee is created in a new component.
+    - In order to get access to the form, we need to navigate to that component.
+    - Using routing, let's navigate to the form page, with the help of a button - "New Employee"
